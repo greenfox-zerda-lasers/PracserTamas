@@ -1,0 +1,26 @@
+p {
+    margin: 40;
+    font-size: 18px;
+    width: 180px;
+    }
+
+.brd1 {
+  border: 2px solid black;
+  padding: 40px;
+  background: url("duck.png") no-repeat;
+  background-position: left;
+}
+
+.brd2 {
+  border: 2px solid black;
+  padding: 40px;
+  background: url("duck.png") no-repeat;
+  background-position: center;
+}
+
+.brd3 {
+  border: 2px solid black;
+  padding: 40px;
+  background: url("duck.png") no-repeat;
+  background-position: right bottom;
+}

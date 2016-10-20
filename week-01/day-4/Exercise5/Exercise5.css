@@ -1,0 +1,33 @@
+body {
+    font-family: times;
+}
+
+h1 {
+    color: blue;
+}
+h2 {
+    color: #f2b526;
+}
+
+
+.first {
+    color: blue;
+    font-style: normal;
+    list-style-type: square;
+}
+
+.second {
+    color: black;
+    font-style: normal;
+    list-style-type: disc;
+}
+
+.third {
+    color: black;
+    font-style: normal;
+    list-style-type: decimal;;
+}
+
+.fourt {
+    color: red;
+}
