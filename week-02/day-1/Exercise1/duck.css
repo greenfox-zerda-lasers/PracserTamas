@@ -1,0 +1,19 @@
+.duck1, .duck2 {
+    width: 330px;
+    border-bottom: 2px solid black;
+    text-align: justify;
+    padding: 10px 0px 10px 0px;
+}
+
+.picture1, .picture2 {
+    margin: 15px;
+}
+
+.picture1 {
+    float: left;
+}
+
+.picture2 {
+    float: right;
+    margin: 15px;
+}
