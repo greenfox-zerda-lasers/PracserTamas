@@ -3,6 +3,7 @@
     border-bottom: 2px solid black;
     text-align: justify;
     padding: 10px 0px 10px 0px;
+    position: relative;
 }
 
 .picture1, .picture2 {
@@ -19,10 +20,15 @@
 }
 
 .popup {
+    background-color: white;
     width: 240px;
     height: 155px;
     border: 2px solid black;
     border-radius: 10px;
+    position: absolute;
+    top: -340px;
+    left: 140px;
+    position: relative;
 }
 
 .popup h1 {
@@ -55,15 +61,28 @@
     padding-top: 20px;
 }
 
+.xbutton span{
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    margin: 0;
+}
+/*
 .popup:after {
-    content:"x";
+    content:"X";
     background-color: black;
     color: white;
     border-radius: 50%;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     display: block;
     box-sizing: border-box;
     text-align: center;
-    padding-bottom: 2px;
+    padding-bottom: 1px;
+    position: absolute;
+    top: 30px,
 }
+*/
