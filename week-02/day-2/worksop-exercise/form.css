@@ -1,0 +1,123 @@
+.containerbig {
+    width: 826px;
+    height: auto;
+    background-color: #DCD6CD;
+    color: #4A4261;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    padding: 55px 100px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.containertop {
+    width: 620px;
+    height:425px;
+    background-color: #DCD6CD;
+    margin: 10px auto;
+    display: flex;
+}
+
+.containertop h1{
+    width: 300px;
+    height:40px;
+    background-color: #4A4261;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 21px;
+    border-radius: 5px;
+}
+
+.containerbottom {
+    width: 620px;
+    height:400px;
+    background-color: #DCD6CD;
+    margin: 10px auto;
+
+}
+
+.column1 {
+    width: 300px;
+    background-color: #DCD6CD;
+    margin: 0px auto;
+}
+
+.column2 {
+    width: 300px;
+    background-color: #DCD6CD;
+    margin: 0px auto;
+}
+
+.tel .email .face .twit .legordulo {
+    width: 300px;
+
+}
+
+input[type="text"], input[type="email"] {
+    border: 1px solid gray;
+    width: 300px;
+    height: 30px;
+    border-radius: 3px;
+    background-color: white;
+    font-size: 13px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+input[type="radio"]{
+    font-size: 13px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+textarea {
+    box-sizing: border-box;
+    border: 1px solid gray;
+    width: 620px;
+    height: 167px;
+    border-radius: 3px;
+    background-color: white;
+    font-size: 13px;
+}
+
+.oszlop1, .oszlop2{
+    width: 50%;
+    display: inline-block;
+}
+
+.oszlop1{
+    float: left;
+}
+
+button[type="submit"], button[type="reset"] {
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    width: 217px;
+    height: 45px;
+    background-color: #433B58;
+    color: #DCD6CD;
+    font-size: 20px;
+    border: 0;
+}
+
+button[type="reset"]{
+    color: #FFFFFF
+    border: 1px solid #4A4261
+    width: 160px;
+    height: 45px;
+}
+
+.bottombuttons {
+    margin-top: 50px;
+    width: 620px;
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="checkbox"]{
+    margin-top: 15px;
+}
