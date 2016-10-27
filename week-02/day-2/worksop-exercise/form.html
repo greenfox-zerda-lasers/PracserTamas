@@ -106,7 +106,7 @@
 
                         <label for="legordulo">Milyen házban laksz?</label>
                             <select name="legordulo">
-                                <option value="value0"></option>
+                                <option class="type" value="">Válassz típust!</option>
                                 <option value="value1">Kertes ház</option>
                                 <option value="value2">Parasztház</option>
                                 <option value="value3">Csúnya ház</option>
@@ -120,10 +120,12 @@
                 <form>
                     <div>
                         <label for="freetext">Bemutatkozás *</label>
-                        <textarea id="freetext" name="textarea" maxlength=400 placeholder="Írj magadról pár mondatot!"></textarea>
+                        <textarea id="freetext" name="textarea" placeholder="Írj magadról pár mondatot!"></textarea>
                     </div>
                     <span>CV feltöltése</span>
-                    <button class="button0" name="button">FILE KIVÁLASZTÁSA</button>
+                    <div>
+                        <button class="button0" name="button">FILE KIVÁLASZTÁSA</button>
+                    </div>
                     <div>
                         <input type="checkbox" id="check" name="checkbox">
                         <label for="rules">Elfogadom a felhasználási feltételeket</label>

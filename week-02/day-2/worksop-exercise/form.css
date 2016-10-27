@@ -120,4 +120,20 @@ button[type="reset"]{
 
 input[type="checkbox"]{
     margin-top: 15px;
+    height: 14px;
+    width: 14px;
+}
+
+input[type="radio"]{
+    margin-top: 15px;
+    height: 10px;
+    width: 10px;
+}
+
+.type {
+    color: gray;
+}
+
+select[name="legordulo"]:first-child {
+    display: none;
 }

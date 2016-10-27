@@ -1,0 +1,56 @@
+button {
+    width: 230px;
+    height: 70px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19px;
+    box-shadow: 1px 1px 10px grey;
+    padding-bottom: 5px;
+}
+
+.white {
+    margin: 2px;
+    /*background: #D3D3D3;*/
+    background: -webkit-linear-gradient(top, #F0F0F0 0%, #D3D3D3 100%);
+    color: #666666;
+    border: 2px solid #D4D5D5;
+}
+
+.white:hover {
+    background: -webkit-linear-gradient(top, #F0F0F0 50%, #D3D3D3 100%);
+}
+.white:active {
+    background: -webkit-linear-gradient(top, #F0F0F0 0%, #D3D3D3 50%);
+}
+
+.blue {
+    margin: 2px;
+    /*background: #008FB5;*/
+    background: -webkit-linear-gradient(top, #00B3E3 0%, #008FB5 100%);
+    color: white;
+    text-shadow: -0px -1px 2px grey;
+    border: 2px solid #0085A8;
+}
+
+.blue:hover {
+    background: -webkit-linear-gradient(top, #00B3E3 50%, #008FB5 100%);
+}
+.blue:active {
+    background: -webkit-linear-gradient(top, #00B3E3 0%, #008FB5 50%);
+}
+
+.green {
+    /*background: #008FB5;*/
+    background: -webkit-linear-gradient(top, #8CCB00 0%, #70A300 100%);
+    margin: 2px;
+    color: white;
+    text-shadow: -0px -1px 2px grey;
+    border: 2px solid #659200;
+}
+
+.green:hover {
+    background: -webkit-linear-gradient(top, #8CCB00 50%, #70A300 100%);
+}
+
+.green:active {
+    background: -webkit-linear-gradient(top, #8CCB00 0%, #70A300 50%);
+}
