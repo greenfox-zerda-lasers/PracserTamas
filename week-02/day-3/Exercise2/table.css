@@ -43,16 +43,12 @@ tr:last-child td:last-child {
     border-bottom: 0px solid #9DA6AE;
 }
 
-table{
+table {
     border-collapse: collapse;
     width: 800px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
 }
-
-/*.table1{
-    border-radius: 15px;
-}*/
 
 thead tr th {
     height: 100px;

@@ -1,19 +1,23 @@
-* {
+*{
     box-sizing: border-box;
-}
+    }
 
 body {
     font-family: "Times new roman";
     color: red;
     margin-left: 46px;
-}
+    }
 
 .box {
-    margin-top: 14px;
     padding: 20px 15px;
     border: 4px solid #000;
-    width: 240px;
-    height: 70px;
     font-size: 30px;
     background: #FFFF00;
 }
+
+.first {
+    margin: 10px 20px 10px 0px;
+    background: #008200;
+    width: 288px;
+    padding: 20px 15px;
+    }

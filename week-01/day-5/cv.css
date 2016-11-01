@@ -18,6 +18,21 @@ h1 {
     padding-bottom: 50px;
 }
 
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 21px;
+    text-transform: uppercase;
+    margin-left: 240px;
+    margin-right: 370px;
+}
+
+
+h3, h4 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    margin-left: 240px;
+    margin-right: 370px;
+}
 
 .intro {
     display: block;
@@ -54,6 +69,7 @@ p, ul {
     left: -5px;
 }
 
-hr {
-    height: 15px;
+.personal-int {
+    border-top: 3px solid black;
+    padding-top: 50px;
 }

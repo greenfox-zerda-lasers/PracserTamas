@@ -8,13 +8,9 @@ h1, h2 {
 
 .first {
     color: red;
-    font-style: normal;
+    font-style: normal,
 }
 
 em {
     color: blue;
-}
-
-pre {
-    margin-left: -85px;
 }

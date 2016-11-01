@@ -1,12 +1,12 @@
-*{
+* {
     box-sizing: border-box;
-    }
+}
 
 body {
     font-family: "Times new roman";
     color: red;
     margin-left: 46px;
-    }
+}
 
 .box {
     padding: 20px 15px;
@@ -20,4 +20,4 @@ body {
     background: #008200;
     width: 288px;
     padding: 20px 15px;
-    }
+}

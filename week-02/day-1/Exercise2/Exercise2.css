@@ -40,6 +40,7 @@ main {
     width: 50px;
     background-color: #000000;
 }
+
 .red .black {
     position: absolute;
     bottom:20px;

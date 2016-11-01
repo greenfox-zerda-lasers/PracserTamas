@@ -61,7 +61,7 @@
     padding-top: 20px;
 }
 
-.xbutton span{
+.xbutton span {
     color: white;
     background-color: black;
     border-radius: 50px;
@@ -70,19 +70,3 @@
     right: 20px;
     margin: 0;
 }
-/*
-.popup:after {
-    content:"X";
-    background-color: black;
-    color: white;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: block;
-    box-sizing: border-box;
-    text-align: center;
-    padding-bottom: 1px;
-    position: absolute;
-    top: 30px,
-}
-*/
