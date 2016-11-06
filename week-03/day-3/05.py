@@ -6,9 +6,25 @@
 # please don`t use the built in methods
 
 class Stack():
+    elements = [2, 4, 7, 3]
 
     def size(self):
+        elcount = 0
+        for num in self.elements:
+            elcount += 1
+        return elcount
 
-    def size(push):
+    def push(self, newElement):
+        self.elements += [newElement]
+        return self.elements
 
-    def size(pop):
+    def pop(self):
+        elemszam = self.size() - 1
+        print("The last element is: ", self.elements[elemszam])
+        self.elements = self.elements[:-1]
+        return self.elements
+
+nomethod = Stack()
+print("The number of elements: ", nomethod.size())
+print("The pushed element in stack: ", nomethod.push(11))
+print("The poped stack: ", nomethod.pop())
