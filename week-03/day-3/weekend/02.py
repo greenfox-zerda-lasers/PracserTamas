@@ -14,8 +14,8 @@ kukacbar(10)
 # import os
 # os.getuid()
 # os.getpid()
-# os.stat(path)
-
-a = '1'
-b = '2'
-print int(a) / int(b)
+# # os.stat(path)
+#
+# a = '1'
+# b = '2'
+# print int(a) / int(b)
