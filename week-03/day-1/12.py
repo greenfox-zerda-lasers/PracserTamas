@@ -1,2 +1,4 @@
 l = 'python'
-print (l[1:2])
+# Tell the 2nd letter of the word
+
+print(l[1:2])

@@ -4,4 +4,4 @@ b = 3
 
 # concat the product of a and b to the n string
 n = n + str(a * b)
-print (n)
+print(n)
