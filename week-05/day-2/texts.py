@@ -24,3 +24,4 @@ exceptions = {
     "interval_out_last": "You piss me off human! This number is not between {0} and {1}. This is your last chance.",
     "not_whole": "\nDo you wanna die right now? This is not a whole number.",
     "not_whole_final": "\nDo you wanna die right now? This is not a whole number. This is your last chance."
+}
