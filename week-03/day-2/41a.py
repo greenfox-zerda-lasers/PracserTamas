@@ -10,11 +10,11 @@ students = [
 # create a function that counts the students that
 # has more than 4 candies
 
-def howManyStudents(i):
-    numOfStud = 0
-    for student in i:
-        if student["candies"] > 4:
-            numOfStud += 1
-    return numOfStud
+def counter(stud):
+    num_of_dtudents = 0
+    for i in stud:
+        if i["candies"] > 4:
+            num_of_dtudents += 1
+    print(num_of_dtudents)
 
-print(howManyStudents(students))
+counter(students)

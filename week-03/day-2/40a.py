@@ -8,11 +8,11 @@ students = [
 # then returns how many candies are own by students
 # under 10
 
-def candylist(stud):
-    candy = 0
+def student_list(stud):
+    candies = 0
     for i in stud:
         if i["age"] < 10:
-            candy += i["candies"]
-    return candy
-    
-print(candylist(students))
+            candies += i["candies"]
+    print(candies)
+
+student_list(students)

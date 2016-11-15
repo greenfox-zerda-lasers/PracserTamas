@@ -7,4 +7,4 @@ def factorials(num):
         a += 1
     return result
 
-print (factorials(3))
+print (factorials(5))

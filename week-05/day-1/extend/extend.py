@@ -17,7 +17,7 @@ def median(pool):
     pool.sort()
     if len(pool) % 2 == 0:
         a = int(len(pool)/2-1)
-        b = int(len(pool)/2)
+        bz = int(len(pool)/2)
         return (pool[a] + pool[b]) / 2
     else:
         return pool[int((len(pool) - 1) / 2)]
