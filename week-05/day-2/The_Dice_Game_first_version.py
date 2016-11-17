@@ -40,5 +40,4 @@ class Game:
     def rolling(self):
         return(randint(1,6))
 
-
 game1 = Game()
