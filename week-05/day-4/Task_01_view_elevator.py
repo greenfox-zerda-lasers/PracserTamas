@@ -19,7 +19,7 @@ class View():
                 else:
                     print("   || || [   ] || ||       || || ")
         if actual_level == 0 and people >= 1:
-            print("  _||_||_[_{}_]_||_||_______||_||_")
+            print("  _||_||_[_{}_]_||_||_______||_||_".format(people))
         elif actual_level == 0 and people == 0:
             print("  _||_||_[___]_||_||_______||_||_")
         else:

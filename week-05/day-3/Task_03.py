@@ -10,4 +10,4 @@ class Person():
         self.birth_date = birth_date
 
 # if __name__ == '__main__':
-print(person = Person('Laci', 2016))
+print(person = Person('Laci', 2015))

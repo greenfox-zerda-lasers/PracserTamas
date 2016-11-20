@@ -1,13 +1,3 @@
-# Create an "elevator" class
-# The class should track the following things:
-#  - elevator position
-#  - elevator direction - NEM KELL!
-#  - people in the elevator
-#  - add people
-#  - remove people
-#
-# Please remeber that negative amount of people would be troubling
-
 class Elevator():
 
     def __init__(self):

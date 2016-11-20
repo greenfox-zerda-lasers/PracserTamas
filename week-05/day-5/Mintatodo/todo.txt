@@ -1,0 +1,20 @@
+true
+Wake up at 6am
+false
+Wash your teeth
+false
+Feed the cats
+false
+Have a breakfast
+false
+Read the news
+false
+Meet the Fox
+false
+Code a lot
+true
+Watch the new Game of Thrones episode
+false
+Wash the dishes
+false
+Feed the monkey
