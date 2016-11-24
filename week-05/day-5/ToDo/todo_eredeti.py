@@ -69,11 +69,11 @@ class Todo():
 
             elif argList[1] == "-c":
                 try:
-                    read = self.read_File("todo.csv")
-                    selected = read[int(argList[2])-1]
+                    read = self.read_File("todo.csv") # A read egy tömb lesz, aminek az elemei az egyes sorok
+                    selected = read[int(argList[2])-1] # A selected változóhoz hozzárendeljük a kiválasztott tömb elemet
                     if selected[:3] == "[ ]":
-                        selected = "[X]" + selected[3:]
-                        read[int(argList[2])-1] = selected
+                        selected = "[X]" + selected[3:] # A selected[3:] 3-tól felfelé megőrzi az értéket, és eléje beilleszti a [X]-t
+                        read[int(argList[2])-1] = selected # Az új selected érétkét visszarakom a read tömb kiválasztott elemébe
                     else:
                         input1 = input("That task has been completed, are you sure you want to uncheck it? (y/n)")
                         if (input1).lower() == "y":
