@@ -4,4 +4,16 @@
 # The km and the type property should be a parmeter in the constructor
 # It should have a method called "run" that takes a number and increments the "km" property by it
 
-class Car(type, km):
+class Car():
+
+    def __init__(self, type, km):
+        self.type = type
+        self.km = km
+
+    def run(self, number):
+        self.km += number
+        print(self.type)
+        print(self.km)
+
+autos = Car("Mazda", 50000)
+autos.run(500)

@@ -19,5 +19,5 @@ class Pirate():
             return "Nothin`"
 
 drink = Pirate()
-print(drink.drink_rum(6))
+print(drink.drink_rum(4))
 print(drink.hows_goin_mate())

@@ -9,6 +9,7 @@ def newList():
 
     while a < len(myList):
         lastPosition = len(myList) - 1
+        print(lastPosition)
         reverse.append(myList[lastPosition])
         myList.remove(myList[lastPosition])
 

@@ -5,7 +5,7 @@ import map
 class View:
     def __init__(self):
         self.root = Tk()
-        self.canvas = Canvas(self.root, width=850, height=603)
+        self.canvas = Canvas(self.root, width=850, height=603, background="black")
         self.canvas.focus_set()
         self.floor = self.resize("images/floor.png", 55, 55)
         self.wall = self.resize("images/wall.png", 55, 55)
@@ -15,6 +15,9 @@ class View:
         self.hero_right = self.resize("images/hero-right.png", 55, 55)
         self.skeleton = self.resize("images/skeleton.png", 55, 55)
         self.boss = self.resize("images/boss.png", 55, 55)
+        self.title = self.resize("images/title.jpg", 300, 480)
+        self.title_image = self.resize("images/title_image.png", 220, 306)
+        self.draw_image()
         self.canvas.pack()
 
     def resize(self, img_path, width, height):
@@ -44,6 +47,9 @@ class View:
         elif direction == "right":
             self.canvas.create_image(x*55,y*55, image=self.hero_right, anchor=NW, tag="hero")
 
+    def draw_image(self):
+        self.canvas.create_image(550, 0, image=self.title, anchor=NW)
+        self.canvas.create_image(590, 170, image=self.title_image, anchor=NW)
 
     # def draw_skeletons(self, skeletons):
     #     self.canvas.delete("skeleton")
