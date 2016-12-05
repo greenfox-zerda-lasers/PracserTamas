@@ -1,0 +1,14 @@
+'use strict';
+
+var o = "pneumonoultramicroscopicsilicovolcanoconiosis";
+// tell how many letters o has
+
+var how_many_o = 0
+for(var i = 0; i < o.length; i++) {
+    if (o[i] === "o") {
+        how_many_o++ // ugyanaz mint +=1
+    }
+}
+
+console.log(how_many_o)
+console.log(o.length)

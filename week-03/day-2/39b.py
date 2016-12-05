@@ -4,7 +4,7 @@ names = ['Zakarias', 'ul', 'Hans', 'Otto', 'Ole','b;la']
 
 
 def shortest_string(list):
-    shortest = list[0]
+    shortest = [list[0]]
     for i in range(len(list)):
         if len(list[i]) < len(shortest[0]):
             shortest = list[i]
