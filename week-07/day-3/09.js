@@ -25,10 +25,10 @@ function counter(string) {
     var letters = string.split("");
     var countedLetters = {}
     letters.forEach(function(letter){
-        if (countedLetters[letter]){
+        if (countedLetters[letter]){        //Ha volt mar ilyen betu (tehat ha tombben van es igaz) hozzaadunk egyet
             countedLetters[letter] += 1;
         } else {
-            countedLetters[letter] = 1;
+            countedLetters[letter] = 1;     //Ha nem volt meg ilyen betu egynek allitjuk be az erteket
         }
     })
     return countedLetters;
@@ -36,3 +36,27 @@ function counter(string) {
 
 
 console.log(counter("greenfox"));
+
+// CT megoldasa:
+
+function letterReducer (string) {
+  var stringArray = string.split('');
+// ['a', 'l', ...]
+  var charProcessor = function(charCounterObject,currentChar){
+      if (charCounterObject[currentChar]) {
+        charCounterObject[currentChar]++;
+      } else {
+        charCounterObject[currentChar] = 1;
+      }
+      return charCounterObject;
+  }
+  var charCountInString = stringArray.reduce(charProcessor, {});
+  // {
+  //   a: 2,
+  //   l: 1,
+  //   ...
+  // }
+  return charCountInString;
+}
+
+console.log(letterReducer('alma'));

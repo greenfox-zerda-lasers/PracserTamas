@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+}
+
+#main-container{
+    width: 100%;
+}
+
+#content{
+    margin: 0 auto;
+    width: 90%;
+}
+
+.main-image{
+    max-width: 100%;
+}
+
+.left-arrow, .right-arrow{
+    background-color: #fff;
+}
+
+.left-arrow{
+    background-image: url("img/arrow.svg");
+}
+
+.right-arrow {
+    background-image: url("img/arrow.svg");
+    -webkit-transform: rotate(180deg);
+       -moz-transform: rotate(180deg);
+         -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
