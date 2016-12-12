@@ -33,7 +33,9 @@ body{
     background-size: cover;
     width: 100%;
     max-width: 80px;
+    min-width: 30px;
     position: relative;
+    flex: 1;
 }
 
 .left-arrow img{

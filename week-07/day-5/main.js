@@ -25,19 +25,19 @@ container.appendChild(image);
 function right_direction(){
     i++;
     if(images.length > i) {
-        image.style.backgroundImage = images[i];
+        image.setAttribute("src", images[i]);
     } else {
-        image.style.backgroundImage = images[0];
+        image.setAttribute("src", images[0]);
         i = 0;
     }
 }
 
 function left_direction(){
     i--;
-    if(images.length < i) {
-        image.style.backgroundImage = images[0];
-        i = 0;
+    if(i >= 0) {
+        image.setAttribute("src", images[i]);
     } else {
-        image.style.backgroundImage = images[i];
+        image.setAttribute("src", images[images.length-1]);
+        i = images.length-1
     }
 }
