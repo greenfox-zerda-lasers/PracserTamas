@@ -4,8 +4,13 @@
   <meta charset="UTF-8">
   <title>Workshop: Bookmarklets</title>
 </head>
-<body>
-  <a href="javascript:alert('nothing here yet!');">
+<body> onmagat meghivo function
+  <a href="javascript:(function(){var myH1 = document.querySelectorAll('h1');
+      for(var i = 0; i < myH1.length; i++){
+          myH1[i].textContent = 'Green Fox Academy Conquers the World';
+      };})()">     <!-- Onmagat meghivo function.  Abongeszoben valamiert csak igy mukodik. -->
+
+
     Bookmarklet 1
   </a>
   <h1>Antoine de Saint-Exupery's 110th Birthday</h1>
