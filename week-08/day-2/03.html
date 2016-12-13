@@ -1,0 +1,38 @@
+<!-- // set up a setInterval loop with 1.5 second delays
+// - log the mouse coordinates on each call -->
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+var x = 'meg nincs ertekem';
+var y = 'meg nincs ertekem';
+
+// Itt kell beallitani az x es y ertekeket. Az event valtozot az addEventListener
+// cucc adja neki. Ebben az eventben egy csomo info van, koztuk a screenX es screenY
+// erteke is. Es emiatt irunk event.screenX-et. Hszen az evenetnek nezzuk a screenX-et.
+function mmove(event){
+    x = event.screenX;
+    y = event.screenY;
+}
+
+document.addEventListener("mousemove", mmove);
+
+// Itt ki kell irni a event figyelo fuggveny altal kiirt erteket
+function writeOut(){
+    console.log(x, y);
+}
+
+setInterval(writeOut ,1500)
+
+</script>
+
+</body>
+</html>

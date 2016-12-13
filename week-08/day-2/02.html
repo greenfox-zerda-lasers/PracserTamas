@@ -1,0 +1,31 @@
+<!-- // create a function that starts a setTimeout with a 3 second delay.
+// - create a button with an event listener that can cancel the setTimeout -->
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button>Cancel the setTimeout</button>
+    </div>
+    <script>
+    var button = document.querySelector("button");
+
+    function status(){
+        alert("I'm delayed");
+    }
+    var setTime = setTimeout(status, 3000);
+
+    function timeOut() {
+        clearTimeout(setTime);
+    }
+    
+    button.addEventListener("click", timeOut);
+    </script>
+
+</body>
+</html>

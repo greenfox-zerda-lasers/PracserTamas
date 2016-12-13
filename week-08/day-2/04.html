@@ -1,0 +1,38 @@
+<!-- // imitate the setInterval functionality with setTimeouts (recreate the previous excersize) -->
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+var x = 'meg nincs ertekem';
+var y = 'meg nincs ertekem';
+
+function mmove(event){
+    x = event.screenX;
+    y = event.screenY;
+}
+
+document.addEventListener("mousemove", mmove)
+
+function writeOut(){
+    console.log(x, y);
+    timeout();
+}
+
+function timeout(){
+    setTimeout(writeOut ,1500);
+}
+
+timeout();
+
+</script>
+
+</body>
+</html>

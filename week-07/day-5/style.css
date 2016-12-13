@@ -57,9 +57,9 @@ body{
 
 #thumbnails{
     margin: 0 auto;
-    /*animation-duration: 0s;*/
-    background-color: green;
     width: 100%;
     max-width: 800px;
-    height: 70px;
+    display: flex;
+    justify-content: center;
+    /*animation-duration: 0s;*/
 }

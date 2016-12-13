@@ -41,3 +41,20 @@ function left_direction(){
         i = images.length-1
     }
 }
+
+var thumbnails = document.querySelector("#thumbnails");
+
+function thumb(){
+    for(var i = 0; i < 5; i++){
+        var thumbnailImage = document.createElement("img");
+        // thumbnailImage.style.width = "100%";
+        thumbnailImage.style.height = "100%";
+        // thumbnailImage.style.maxWidth = "120px";
+        thumbnailImage.style.maxHeight = "70px";
+        thumbnailImage.style.margin = "0 5px";
+        thumbnailImage.setAttribute("src", images[i]);
+        thumbnails.appendChild(thumbnailImage);
+    }
+}
+
+thumb();
