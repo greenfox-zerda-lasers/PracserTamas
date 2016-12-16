@@ -61,5 +61,12 @@ body{
     max-width: 800px;
     display: flex;
     justify-content: center;
+    overflow: hidden;
     /*animation-duration: 0s;*/
+}
+
+#thumbnails img{
+    height: 100%;
+    width: 10vw;
+    margin: 0 5px;
 }

@@ -1,0 +1,52 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>The Moon</title>
+</head>
+<body>
+	<h1>The story of the Apollo 11</h1>
+	<h2>Interesting articles by The New York Times</h2>
+    <div class="list"></div>
+	<script>
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', "https://api.nytimes.com/svc/search/v2/articlesearch.json?qsearch=moon=landing+apollo+11&api-key=ecf5a7de7cc04cb2b96621ac0933ae26")
+		xhr.send()
+		xhr.onreadystatechange = ready
+
+		function ready (rsp) {
+			console.log( xhr.readyState )
+			if( xhr.readyState === XMLHttpRequest.DONE ) {
+                var articles = JSON.parse(xhr.response);
+				articles = articles.response.docs;
+                console.log(articles);
+                thumb(articles);
+			}
+		}
+
+        var list = document.querySelector(".list");
+		var ul = document.createElement("ul");
+		list.appendChild(ul);
+
+		function thumb(articles){
+            for(var i = 0; i < articles.length; i++){
+                var li = document.createElement("li");
+				var h1 = document.createElement("h1");
+				var pSnippet = document.createElement("p");
+				var pDate = document.createElement("p");
+				var link = document.createElement("a");
+				link.setAttribute("href", articles[i].web_url);
+
+                link.textContent = articles[i].headline.main;
+				pSnippet.textContent = articles[i].snippet;
+				pDate.textContent = articles[i].pub_date;
+
+				h1.appendChild(link);
+				li.appendChild(h1);
+				li.appendChild(pSnippet);
+				li.appendChild(pDate);
+                ul.appendChild(li);
+            }
+        }
+	</script>
+</body>
+</html>

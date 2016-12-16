@@ -47,14 +47,15 @@ var thumbnails = document.querySelector("#thumbnails");
 function thumb(){
     for(var i = 0; i < 5; i++){
         var thumbnailImage = document.createElement("img");
-        // thumbnailImage.style.width = "100%";
-        thumbnailImage.style.height = "100%";
-        // thumbnailImage.style.maxWidth = "120px";
-        thumbnailImage.style.maxHeight = "70px";
-        thumbnailImage.style.margin = "0 5px";
         thumbnailImage.setAttribute("src", images[i]);
+        thumbnailImage.addEventListener("click", thumbToBig);
         thumbnails.appendChild(thumbnailImage);
     }
+}
+
+function thumbToBig(){
+    var url = this.getAttribute("src");
+    image.setAttribute("src", url);
 }
 
 thumb();

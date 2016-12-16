@@ -1,0 +1,50 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Cats</title>
+</head>
+<body>
+	<h1>Funny cats</h1>
+    <div class="bigimage"><img></div>
+    <div class="thumbnails"></div>
+	<script>
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', 'http://api.giphy.com/v1/gifs/search?q=cute+dogs&api_key=dc6zaTOxFJmzC&limit=16')
+		xhr.send()
+		xhr.onreadystatechange = ready
+
+		function ready (rsp) {
+			console.log( xhr.readyState )
+			if( xhr.readyState === XMLHttpRequest.DONE ) {
+                var images = JSON.parse(xhr.response)
+                console.log(images.data) // - Ezzel ki tudom iratni a folyamat allapotat
+                // logger(images)
+                thumb(images);
+			}
+		}
+
+        // function logger(waitingfor){
+        //     console.log(waitingfor.data);
+        // }
+
+        var thumbnails = document.querySelector(".thumbnails");
+        var bigpic = document.querySelector(".bigimage img");
+
+        function thumb(images){
+            for(var i = 0; i < images.data.length; i++){
+                var thumbnailImage = document.createElement("img");
+                thumbnailImage.style.height = "100%";
+                thumbnailImage.style.maxHeight = "100px";
+                thumbnailImage.style.margin = "10px 10px";
+                thumbnailImage.dataset.fullurl = images.data[i].images.original.url; // A fullurl csak egy nev
+                thumbnailImage.setAttribute("src", images.data[i].images.fixed_height_still.url);
+                thumbnailImage.addEventListener("click", gif);
+                thumbnails.appendChild(thumbnailImage);
+            }
+        }
+        function gif(){
+            bigpic.setAttribute("src", this.dataset.fullurl);
+        }
+	</script>
+</body>
+</html>
