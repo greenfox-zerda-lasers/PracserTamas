@@ -44,6 +44,15 @@ body{
     left: 35%;
 }
 
+.left-arrow img:hover{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    /*width: 10%;*/
+    /*border: 1px solid green;*/
+    /*box-shadow: 0 0 1em rgba(120,150,160,0.5);*/
+}
+
 .right-arrow img{
     position: absolute;
     top: 50%;
@@ -61,6 +70,7 @@ body{
     max-width: 800px;
     display: flex;
     justify-content: center;
+    box-sizing: border-box;
     overflow: hidden;
     /*animation-duration: 0s;*/
 }
@@ -68,5 +78,16 @@ body{
 #thumbnails img{
     height: 100%;
     width: 10vw;
+    margin: 0 5px;
+    -webkit-transition: all 1s ease;
+   -moz-transition: all 1s ease;
+     -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+        transition: all 1s ease;
+}
+
+#thumbnails img:hover{
+    height: 110%;
+    width: 15vw;
     margin: 0 5px;
 }

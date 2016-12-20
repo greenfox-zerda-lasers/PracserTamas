@@ -1,8 +1,73 @@
+'use strict';
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET', "https://mysterious-dusk-8248.herokuapp.com/todos");
+xhr.send();
+xhr.onreadystatechange = ready;
+
+function ready (rsp) {
+    console.log( xhr.readyState )
+    if( xhr.readyState === XMLHttpRequest.DONE ) {
+        var lists = JSON.parse(xhr.response);
+        console.log(lists);
+        todos(lists);
+    }
+}
+
+var list = document.querySelector(".list-elements");
+
+function todos(lists){
+    for(var i = 0; i < lists.length; i++){
+        var li = document.createElement("li");
+        var todo = document.createElement("span");
+        var trash = document.createElement("i");
+        trash.addEventListener("click", function(e){
+            var nthLi = e.target.parentElement;
+            list.removeChild(nthLi);
+            deleteTask(nthLi);
+        })
+        var checkBox = document.createElement("i");
+        checkBox.addEventListener("click", function(event){
+
+            console.log(event);
+            console.log(this.classList);
+            this.classList.toggle("ion-android-checkbox-outline");
+            this.classList.toggle("ion-android-checkbox-outline-blank");
+            // var todoText = document.querySelector(".list-elements span");
+            // console.log(todoText);
+            // if(todoText.classList.contains("ready") == true) {
+            //     todoText.classList.remove("ready");
+            // } else {
+            //     todoText.classList.add("ready");
+            // }
+            var comp = this.classList.contains("ion-android-checkbox-outline");
+            updateTask(event.target.parentElement, comp);
+        });
+
+        li.setAttribute("id", lists[i].id);
+        todo.textContent = lists[i].text;
+        trash.className = "ion-trash-a";
+        checkBox.className = ( lists[i].completed == true ) ? "ion-android-checkbox-outline" : "ion-android-checkbox-outline-blank";
+        // todoText.className = ( lists[i].completed == true ) ? "ready" : "unchechked";
+
+        li.appendChild(todo);
+        li.appendChild(checkBox);
+        li.appendChild(trash);
+        list.appendChild(li);
+    };
+};
+
 var inputField = document.querySelector("input");
 var button = document.querySelector(".add-button");
-var ul = document.querySelector("ul")
+var ul = document.querySelector("ul");
 
 button.addEventListener("click", addItem);
+inputField.addEventListener("keypress", function(e) {
+    var key = e.which || e.keyCode;
+    if (key === 13) {
+        addItem();
+    }
+});
 
 function addItem() {
     var listElement = document.createElement("li");
@@ -11,10 +76,38 @@ function addItem() {
     trash.className = "ion-trash-a";
     var checkbox = document.createElement("i");
     checkbox.className = "ion-android-checkbox-outline-blank";
+    checkbox.addEventListener("click", function(event){
+        console.log(event);
+        console.log(this);
+        // document.setAttribute("class", "ion-android-checkbox-outline");
+    });
     todo.textContent = inputField.value;
     inputField.value = "";
     listElement.appendChild(todo);
-    listElement.appendChild(trash);
     listElement.appendChild(checkbox);
+    listElement.appendChild(trash);
     ul.appendChild(listElement);
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', "https://mysterious-dusk-8248.herokuapp.com/todos");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(JSON.stringify({
+        "text": todo.textContent
+    }));
 }
+
+function deleteTask (item) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('DELETE', "https://mysterious-dusk-8248.herokuapp.com/todos/" + item.id)
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send()
+};
+
+function updateTask (item, comp) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('PUT', "https://mysterious-dusk-8248.herokuapp.com/todos/" + item.id)
+    xhr.setRequestHeader("Content-Type", "application/json");
+    console.dir(item);
+    var data = {text: item.innerText, completed: comp}
+    console.log(data);
+    xhr.send(JSON.stringify(data))
+};

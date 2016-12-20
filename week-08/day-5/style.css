@@ -19,13 +19,14 @@ body{
     flex-direction: column;
     border-radius: 4px;
     box-shadow: 0 0 1em rgba(120,150,160,0.5);
+    display: table;
 }
 
 .title{
     /*margin: 5% auto 2% auto;*/
     width: 100%;
     max-width: 500px;
-    height: 170px;
+    min-height: 170px;
     display: flex;
     justify-content: center;
 }
@@ -40,7 +41,7 @@ body{
     /*margin: 0 auto;*/
     width: 100%;
     max-width: 500px;
-    height: 50px;
+    min-height: 50px;
     display: flex;
     justify-content: center;
     /*overflow: hidden;*/
@@ -71,6 +72,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+input[type="text"]{
+    font-size:30px;
+    padding-left: 20px;
 }
 
 .todos{
@@ -79,6 +86,10 @@ body{
     max-width: 500px;
     display: flex;
     justify-content: center;
+}
+
+.todos ul, li{
+    list-style-type: none;
 }
 
 .todos ul, li, span{
@@ -90,20 +101,39 @@ body{
     height: 100%;
     max-width: 500px;
     padding-left: 0px;
+    clear: both;
+}
+
+.ready{
+    color: red;
+    /*color: #cecece;*/
+}
+
+.unchechked{
+    color: #9b9b9b;
+}
+
+body > main > article:nth-child(3) > ul{
+    margin-right: 30px;
 }
 
 .ion-trash-a{
     font-size: 25px;
     float: right;
     margin: 0 10px;
+    cursor: pointer;
 }
 
 .ion-android-checkbox-outline-blank{
     font-size: 25px;
     float: right;
     margin: 0 10px;
+    cursor: pointer;
 }
 
 .ion-android-checkbox-outline{
-
+    font-size: 25px;
+    float: right;
+    margin: 0 10px;
+    cursor: pointer;
 }

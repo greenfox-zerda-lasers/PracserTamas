@@ -45,10 +45,12 @@ function left_direction(){
 var thumbnails = document.querySelector("#thumbnails");
 
 function thumb(){
-    for(var i = 0; i < 5; i++){
+    for(var i = 0; i < images.length; i++){
         var thumbnailImage = document.createElement("img");
         thumbnailImage.setAttribute("src", images[i]);
+        thumbnailImage.dataset.index = i;
         thumbnailImage.addEventListener("click", thumbToBig);
+        // thumbnailImage.setAttribute("class", "thumb");
         thumbnails.appendChild(thumbnailImage);
     }
 }
@@ -56,6 +58,56 @@ function thumb(){
 function thumbToBig(){
     var url = this.getAttribute("src");
     image.setAttribute("src", url);
+    i = this.dataset.index;
 }
 
 thumb();
+
+// Ez egy proba az egermozgas figyelesere
+thumbnails.addEventListener("mousemove", function(e){console.log(e)})
+//
+
+
+// var xCenter:int = thumbMask.width/2;
+// var acc:Number;
+//
+// clipContainer.addEventListener(MouseEvent.ROLL_OVER, onClipRoll);
+// clipContainer.addEventListener(MouseEvent.ROLL_OUT, onClipRoll);
+//
+// function onClipRoll(event:MouseEvent):void {
+//     if(event.type == MouseEvent.ROLL_OVER) clipContainer.addEventListener(Event.ENTER_FRAME, moveContainer);
+//     else clipContainer.removeEventListener(Event.ENTER_FRAME, moveContainer);
+// }
+//
+// function moveContainer(event:Event):void {
+//     acc = thumbMask.mouseX < xCenter ? xCenter-thumbMask.mouseX : -(thumbMask.mouseX-xCenter);
+//     clipContainer.x += acc * 0.05;
+
+
+// Ebben a verzioban nem megy korbe a kepsor, megall a vegen:
+// var leftLimit:int = 0;
+// var rightLimit:int = -245;
+//
+// var thumbWidth:Number = thumbMask.width;
+//
+// var xRef:Number;
+// var xConv:Number;
+//
+// clipContainer.addEventListener(MouseEvent.ROLL_OVER, onClipRoll);
+// clipContainer.addEventListener(MouseEvent.ROLL_OUT, onClipRoll);
+//
+// function onClipRoll(event:MouseEvent):void {
+//     if(event.type == MouseEvent.ROLL_OVER) clipContainer.addEventListener(Event.ENTER_FRAME, moveContainerBySlow);
+//     else clipContainer.removeEventListener(Event.ENTER_FRAME, moveContainerBySlow);
+// }
+//
+// function moveContainerBySlow(evt:Event):void {
+//     xRef = -thumbMask.mouseX + thumbWidth / 2;
+//     xConv = (xRef - clipContainer.x) * 0.01;
+//
+//     clipContainer.x += xConv;
+//
+//     // cliplimits
+//     if (clipContainer.x>= leftLimit) clipContainer.x = leftLimit;
+//     if (clipContainer.x <= rightLimit) clipContainer.x = rightLimit;
+// }
