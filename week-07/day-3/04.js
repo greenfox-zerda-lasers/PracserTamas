@@ -3,10 +3,29 @@
 var af = [4, 5, 6, 7];
 // print all the elements of af, dont use for or while :)
 
-function element_printer(func, array){
-    array.forEach(function(item){
-        func(item);
+function print(array){
+    array.forEach(function(i){
+        console.log(i);
     })
 }
 
-element_printer(console.log, af);
+print(af);
+
+
+// function print(func, array){
+//     array.forEach(function(i){
+//         func(i);
+//     })
+// }
+//
+// print(console.log, af);
+
+//////////////////////////////////////////////////////
+
+// function element_printer(func, array){
+//     array.forEach(function(item){
+//         func(item);
+//     })
+// }
+//
+// element_printer(console.log, af);

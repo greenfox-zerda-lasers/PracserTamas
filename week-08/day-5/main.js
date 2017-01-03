@@ -33,19 +33,20 @@ function todos(lists){
             console.log(this.classList);
             this.classList.toggle("ion-android-checkbox-outline");
             this.classList.toggle("ion-android-checkbox-outline-blank");
-            // var todoText = document.querySelector(".list-elements span");
-            // console.log(todoText);
-            // if(todoText.classList.contains("ready") == true) {
-            //     todoText.classList.remove("ready");
-            // } else {
-            //     todoText.classList.add("ready");
-            // }
+            if(event.target.previousSibling.classList.contains("ready") == true) {
+                event.target.previousSibling.classList.remove("ready");
+            } else {
+                event.target.previousSibling.classList.add("ready");
+            }
             var comp = this.classList.contains("ion-android-checkbox-outline");
             updateTask(event.target.parentElement, comp);
         });
 
         li.setAttribute("id", lists[i].id);
         todo.textContent = lists[i].text;
+        if(lists[i].completed == true){
+            todo.classList.add("ready");
+        }
         trash.className = "ion-trash-a";
         checkBox.className = ( lists[i].completed == true ) ? "ion-android-checkbox-outline" : "ion-android-checkbox-outline-blank";
         // todoText.className = ( lists[i].completed == true ) ? "ready" : "unchechked";

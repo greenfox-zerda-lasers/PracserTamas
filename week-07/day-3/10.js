@@ -4,11 +4,10 @@
 // that has a method `addgrade`, that takes a grade from 1 to 5
 // an other method `getAverage`, that returns the average of the grades
 
-
 var student = {
     grades: [],
     addgrade: function addgrade(grade){
-        if (grade > 0 && grade < 6) {
+        if(grade > 0 && grade < 6){
             this.grades.push(grade);
         }
     },
@@ -18,9 +17,10 @@ var student = {
             summa += element;
         })
         return summa / this.grades.length;
-    }
+    },
 }
 
-console.log(student.addgrade(5));
-console.log(student.addgrade(3));
+student.addgrade(3);
+student.addgrade(5);
+student.addgrade(4);
 console.log(student.getAverage());

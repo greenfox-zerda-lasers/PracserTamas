@@ -8,3 +8,9 @@ function apply(func) {
 }
 
 apply(console.log) // should log apple
+
+// function apply(func){
+//     func("apple");
+// }
+//
+// apply(console.log);

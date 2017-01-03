@@ -6,6 +6,20 @@ var numbers = [2.4, 3.5, 1.7, 3.3, 1.2];
 // it should return a new array that consists only the numbers that are
 // bigger than 2 and all of it's elements should be rounded
 
+function bigger_than_two(arr){
+    var newArr = [];
+    arr.forEach(function(i){
+        if(i > 2){
+            newArr.push(Math.round(i));
+        }
+    })
+    return newArr;
+}
+
+console.log(bigger_than_two(numbers));
+
+////////////////////////////////////////////////////
+
 function isBigEnough(array) {
     var filtered = array.filter(function(item1) {
         return item1 > 2

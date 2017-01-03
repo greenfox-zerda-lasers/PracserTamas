@@ -45,3 +45,22 @@ caller(numberMaker)     //Es itt hivom meg a callert a numbermakerrel
 //             break;
 //     }
 // }
+
+function number(numb){
+    switch(numb){
+        case 0:
+            console.log("zero");
+            break;
+        case 1:
+            console.log("one");
+            break;
+        case 2:
+            console.log("two");
+            break;
+        default:
+            console.log("many");
+            break;
+    }
+}
+
+number(3);

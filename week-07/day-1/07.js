@@ -4,8 +4,13 @@ var g1 = 123;
 var g2 = 345;
 // tell if g1 is bigger than g2
 
+if (g1 > g2) {
+    console.log("g1 is bigger")
+} else {
+    console.log("g1 is not bigger");
+}
 
-console.log(g1 > g2);
+// console.log(g1 > g2);
 
 // if (g1 > g2) {
 //     console.log("g1 is bigger")

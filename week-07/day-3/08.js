@@ -13,6 +13,18 @@ var students = [
 // create a function that counts the students that
 // has more than 4 candies
 
+function candy_meter(array){
+    var studWithMoreThanFourCandies = array.filter(function(item){
+        return item.candies > 4;
+    });
+    return studWithMoreThanFourCandies.length;
+}
+
+console.log(candy_meter(students));
+
+
+
+
 // function studentCounter(array){
 //     return array.filter(function(student){
 //         return student["candies"] > 4;
@@ -22,11 +34,12 @@ var students = [
 //  filterezett cuccot valtozokent adom meg es utana ennek nezem a hosszat
 
 
-function studentCounter(array){
-    var studWithMoreThanFourCandies = array.filter(function(student){
-        return student["candies"] > 4;
-    })
-    return studWithMoreThanFourCandies.length;
-}
-
-console.log(studentCounter(students));
+// function studentCounter(array){
+//     var studWithMoreThanFourCandies = array.filter(function(student){
+//         console.log(student);
+//         return student["candies"] > 4;
+//     })
+//     return studWithMoreThanFourCandies.length;
+// }
+//
+// console.log(studentCounter(students));
