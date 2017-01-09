@@ -18,5 +18,18 @@ function each_1(arr, func){
     })
 }
 
-each(students, console.log)
-each_1(students, console.log)
+function each_2(arr){
+    arr.forEach(function(i){
+        console.log(i);;
+    })
+}
+
+
+students.forEach(function(i){
+    console.log(i);;
+})
+
+
+each(students, console.log);
+each_1(students, console.log);
+each_2(students);

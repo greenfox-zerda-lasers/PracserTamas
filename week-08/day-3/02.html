@@ -9,15 +9,15 @@
     <div class="thumbnails"></div>
 	<script>
 		var xhr = new XMLHttpRequest();
-		xhr.open('GET', 'http://api.giphy.com/v1/gifs/search?q=cute+dogs&api_key=dc6zaTOxFJmzC&limit=16')
-		xhr.send()
-		xhr.onreadystatechange = ready
+		xhr.open('GET', 'http://api.giphy.com/v1/gifs/search?q=cute+dogs&api_key=dc6zaTOxFJmzC&limit=16');
+		xhr.send();
+		xhr.onreadystatechange = ready;
 
 		function ready (rsp) {
-			console.log( xhr.readyState )
+			console.log( xhr.readyState );
 			if( xhr.readyState === XMLHttpRequest.DONE ) {
-                var images = JSON.parse(xhr.response)
-                console.log(images.data) // - Ezzel ki tudom iratni a folyamat allapotat
+                var images = JSON.parse(xhr.response);
+                console.log(images.data); // - Ezzel ki tudom iratni a folyamat allapotat
                 // logger(images)
                 thumb(images);
 			}

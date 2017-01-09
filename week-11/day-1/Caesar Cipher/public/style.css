@@ -1,0 +1,126 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 50px 0;
+    font-family: "Lato", sans-serif;
+    background-color: #50e3c2;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 700px;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    box-shadow: 0 0 1em rgba(120,150,160,0.5);
+    display: table;
+}
+
+.title {
+    width: 100%;
+    max-width: 700px;
+    min-height: 170px;
+    display: flex;
+    justify-content: center;
+}
+
+.title h1 {
+    font-weight: 300;
+    font-size: 64px;
+    color: #9b9b9b
+}
+
+.input-field {
+    width: 100%;
+    max-width: 700px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.text-and-button {
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #cecece;
+    overflow: hidden;
+}
+
+.input-field input {
+    width: 450px;
+    border: 0;
+}
+
+.number-input {
+    width: 100%;
+    max-width: 450px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.shift-number {
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #cecece;
+    overflow: hidden;
+    margin-left: 20px;
+}
+
+input[type=number] {
+    font-size:30px;
+    padding-left: 20px;
+}
+
+.input-field .add-button {
+    width: 120px;
+    font-weight: 350;
+    font-size: 26px;
+    color: #ffffff;
+    background-color: #df69e8;
+    border-left: 1px solid #cecece;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    font-size:30px;
+    padding-left: 20px;
+}
+
+.decoded-messages {
+    padding-left: 0px;
+    height: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.decoded-messages ul, li {
+    list-style-type: none;
+}
+
+.decoded-messages ul, li, span {
+    list-style-type: none;
+    font-size: 26px;
+    font-weight: 350;
+    line-height: 2.2;
+    color: #9b9b9b;
+    height: 100%;
+    max-width: 500px;
+    padding-left: 0px;
+    clear: both;
+}
+
+body > main > article:nth-child(3) > ul {
+    margin-right: 30px;
+}
