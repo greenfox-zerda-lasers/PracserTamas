@@ -1,10 +1,10 @@
 var test = require("tape");
-var appenderFunc = require("./39");
+var appenderFunc = require("./40");
 
-test("add one number", function(t){
-    var actual = duoblerFunc(2);
-    var expected = 4;
+test('adding an "a" to the end of string', function (t) {
+    var actual = appenderFunc('kuty');
+    var expected = 'kutya';
 
-    t.equal(actual, expected, '2*2');
+    t.equal(actual, expected);
     t.end();
 });

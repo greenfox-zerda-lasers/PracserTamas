@@ -15,3 +15,5 @@ function getShortestString(list) {
 }
 
 console.log(getShortestString(names))
+
+module.exports = getShortestString;

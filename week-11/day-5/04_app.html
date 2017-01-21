@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="myNinjaApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Hello</title>
+        <script src="app\lib\angular.min.js" charset="utf-8"></script>
+        <script src="app\app.js" charset="utf-8"></script>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div ng-controller="Ninjacontroller">
+            <p>{{message}}</p>
+            <ul>
+                <li ng-repeat="ninja in ninjas">{{ninja}}</li>
+            </ul>
+        </div>
+    </body>
+</html>

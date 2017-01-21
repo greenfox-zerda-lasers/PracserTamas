@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <meta charset="utf-8">
+        <title>Hello</title>
+        <script src="app\lib\angular.min.js" charset="utf-8"></script>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body ng-init="ninjas=['yoshi', 'christal', 'ryu', 'shaun']">
+        <input type="text" ng-model="favMeat" placeholder="Ide írjál vALAMI!">
+        <p>You like {{ninjas[0]}} and also {{ninjas[2]}}</p>
+        <p>{{favMeat}}</p>
+        <p></p>
+        <div ng-init="color='red'">
+            <p class="{{color}}">Hello!</p>
+        </div>
+
+        <ul>
+            <li +="ninja in ninjas">{{ninja}}</li>
+        </ul>
+    </body>
+</html>

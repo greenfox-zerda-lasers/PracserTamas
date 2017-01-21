@@ -1,0 +1,25 @@
+{
+  "name": "zerda-exam-web",
+  "version": "1.0.0",
+  "description": "exam",
+  "main": "test.js",
+  "scripts": {
+    "test": "node test.js | faucet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tpracser/zerda-exam-web.git"
+  },
+  "author": "Pracsi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tpracser/zerda-exam-web/issues"
+  },
+  "homepage": "https://github.com/tpracser/zerda-exam-web#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mysql": "^2.12.0",
+    "tape": "^4.6.3"
+  }
+}

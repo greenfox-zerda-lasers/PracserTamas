@@ -12,3 +12,5 @@ function summarizer(list) {
 }
 
 console.log(summarizer(numbers))
+
+module.exports = summarizer;

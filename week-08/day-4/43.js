@@ -16,3 +16,5 @@ function filter(list) {
 }
 
 console.log(filter(numbers))
+
+module.exports = filter;

@@ -15,3 +15,5 @@ function getMinimal(list) {
 }
 
 console.log(getMinimal(numbers))
+
+module.exports = getMinimal;

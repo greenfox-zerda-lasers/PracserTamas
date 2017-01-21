@@ -11,3 +11,5 @@ function factorial(input) {
 }
 
 console.log(factorial(4))
+
+module.exports = factorial;

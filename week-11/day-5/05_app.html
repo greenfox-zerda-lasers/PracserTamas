@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="myNinjaApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Hello</title>
+        <script src="app\lib\angular.min.js" charset="utf-8"></script>
+        <script src="app\app.js" charset="utf-8"></script>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div ng-controller="Ninjacontroller">
+            <input type="text" ng-model="search">
+            <ul>
+                <li ng-repeat="ninja in ninjas | orderBy: 'name' | filter: search">
+                    {{ninja.name}} - {{ninja.rate | currency}}
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
