@@ -7,12 +7,23 @@
 // 08_app.html-hez:
 var myNinjaApp = angular.module('myNinjaApp', ['ngRoute', 'ngAnimate']);
 
-myNinjaApp.config(['$routeProvider', function($routeProvider){
+myNinjaApp.config(['$routeProvider', '$locationProvider',  function($routeProvider, $locationProvider){
+
+    //Prettyurl miatt van itt:
+    $locationProvider.html5Mode(true);
 
     $routeProvider
         .when('/home', {
             templateUrl: 'views/home.html',
             controller: 'Ninjacontroller'
+        })
+        .when('/contact', {
+            templateUrl: 'views/contact.html',
+            controller: 'Contactcontroller'
+        })
+        .when('/contact-success', {
+            templateUrl: 'views/contact-success.html',
+            controller: 'Contactcontroller'
         })
         .when('/directory', {
             templateUrl: 'views/directory.html',
@@ -112,4 +123,10 @@ myNinjaApp.controller('Ninjacontroller', ['$scope', '$http', function($scope, $h
     // console.log(angular.toJson($scope.ninjas));
     // Ezzelcsinaltam a ninjas tombombol json-t amit a consolra kiirattam es ennek eredmenyet masoltam be a data json file-ba. Kozben a jsonlint.com - on ellenoriztem az ervenyesseget.
 
+}]);
+
+myNinjaApp.controller('Contactcontroller', ['$scope', '$location', function($scope, $location){
+    $scope.sendMessage = function(){
+        $location.path('/contact-success')
+    };
 }]);

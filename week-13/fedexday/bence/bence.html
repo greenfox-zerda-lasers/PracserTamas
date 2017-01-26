@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bence say JEAH</title>
+    <link async href="http://fonts.googleapis.com/css?family=Abel" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="bence.css">
+</head>
+<body>
+    <div class="container">
+        <img class="starter" src=./morc2.jpg>
+        <img class="yeah hide" src=./yeah2.jpg>
+        <div class="enjoy-css hide">Jeeeeee!</div>
+    </div>
+
+    <script>
+        var starter = document.querySelector('.starter');
+        var yeah = document.querySelector('.yeah');
+        var container = document.querySelector('.container');
+        var bubble = document.querySelector('.enjoy-css');
+        var audio = new Audio('bencehang-cut.mp3');
+
+
+        starter.addEventListener('click', function() {
+            starter.classList.add('hide');
+            yeah.classList.remove('hide');
+            bubble.classList.remove('hide');
+            container.classList.add('kitties');
+            audio.play();
+        })
+
+        yeah.addEventListener('click', function() {
+            yeah.classList.add('hide');
+            bubble.classList.add('hide');
+            starter.classList.remove('hide');
+            container.classList.remove('kitties');
+        })
+    </script>
+</body>
+</html>
