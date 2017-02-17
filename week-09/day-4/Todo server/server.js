@@ -3,7 +3,9 @@
 var express = require("express");
 var bodyParser = require('body-parser')
 var mysql = require("mysql");
+var cors = require('cors');
 var app = express();
+app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static("./public")) //Ezzel hivom meg a todom konyvtarat es mukodtetem a todot
 // var newId = data.length
@@ -27,7 +29,7 @@ app.get('/todos', function(req, res) {
     con.query("SELECT * FROM todos;",function(err,rows){
         console.log("Data received from Db:\n");
         console.log(rows);
-        res.send(rows);
+        res.status(200).send(JSON.stringify(rows));
     });
 });
 

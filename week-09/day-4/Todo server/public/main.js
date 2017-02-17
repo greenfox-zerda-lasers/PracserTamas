@@ -1,7 +1,7 @@
 'use strict';
 var url = "http://localhost:3000/todos/";
 var xhr = new XMLHttpRequest();
-xhr.open('GET', url);
+xhr.open('GET', url, true);
 xhr.send();
 xhr.onreadystatechange = ready;
 
